@@ -1,0 +1,15 @@
+{% extends "head.html" %}
+
+{% block content %}
+
+<body>
+    <h1>Please choose your stock to predict</h1>
+    <form action="/predictor" method="post">
+        {% csrf_token %}
+        <label for="name_stock">Company Name:</label>
+        <input type="text" id="name_stock" name="name_stock"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+{% endblock %}
